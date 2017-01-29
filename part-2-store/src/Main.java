@@ -1,6 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        Computer UltraPC = new Computer();
-        UltraPC.printComputerSummary();
+
+        ComputerStore awesomeStore = new ComputerStore();
+
+        Computer SuperComputer = new Computer();
+        Computer DuperComputer = new Computer();
+
+        awesomeStore.addComputer(SuperComputer);
+        awesomeStore.addComputer(DuperComputer);
+
+        SuperComputer.printSummary();
+        DuperComputer.printSummary();
+
+        SuperComputer.individualPrice();
+        DuperComputer.individualPrice();
+
+        awesomeStore.costOfAllComputers();
     }
 }
