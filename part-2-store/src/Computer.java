@@ -11,8 +11,8 @@ public class Computer {
         display = new Display(4000,60,"Asus","3840 x 2160");
     }
 
-    // Prints the names and cost of peripherals
-    public void printComputerSummary() {
+    // Prints the names and costs of peripherals
+    public void printSummary() {
 
         // Print Processor Information
         System.out.println("Processor Info:");
@@ -36,6 +36,11 @@ public class Computer {
         System.out.println("Manufacturer: " + display.getManufacturer());
         System.out.println("Resolution: " + display.getResolution());
         System.out.println("Refresh Rate: " + display.getRefreshRate() + "Hz");
-        System.out.println("Price: " + display.getCost() + "kr");
+        System.out.println("Price: " + display.getCost() + "kr" + "\n\n\n\n");
     }
-}
+
+    // Returns the cumulative cost of each computer.
+    public int individualPrice() {
+        return processor.getCost() + harddrive.getCost() + display.getCost();
+        }
+    }
