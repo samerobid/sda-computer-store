@@ -30,7 +30,7 @@ public class ComputerStore {
     }
 
     // Prints the total cost for all computers
-    public void costOfAllComputers( ) {
+    public void getTotalCost( ) {
         int total = 0;
         for(Computer computer : computers) {
             total = total + computer.individualPrice();

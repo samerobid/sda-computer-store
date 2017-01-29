@@ -15,6 +15,6 @@ public class Main {
         SuperComputer.individualPrice();
         DuperComputer.individualPrice();
 
-        awesomeStore.costOfAllComputers();
+        awesomeStore.getTotalCost();
     }
 }
