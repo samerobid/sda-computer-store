@@ -33,8 +33,18 @@ public class ComputerStore {
     public void getTotalCost( ) {
         int total = 0;
         for(Computer computer : computers) {
-            total = total + computer.individualPrice();
+            total = total + computer.getPrice();
         }
         System.out.println("Total price of all computers in store: " + total + "kr");
+    }
+
+    public Computer findMostExpensiveV1() {
+        Computer mostExpensive = computers.get(0);
+        for( int i = 0; i < computers.size(); i++){
+            if(computers.get(i).getPrice() > mostExpensive.getPrice()){
+                mostExpensive = computers.get(i);
+            }
+        }
+        return mostExpensive;
     }
 }
