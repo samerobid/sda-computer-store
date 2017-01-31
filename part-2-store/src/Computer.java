@@ -3,16 +3,14 @@ public class Computer {
     private Processor processor;
     private HardDrive harddrive;
     private Display display;
+    private String name;
 
     // Constructor
-    public Computer(Processor processor, HardDrive harddrive, Display display) {
+    public Computer(Processor processor, HardDrive harddrive, Display display, String name) {
         this.processor = processor;
         this.display = display;
         this.harddrive = harddrive;
-
-        // processor = new Processor(6500,2000,"Xeon","Intel");
-        // harddrive = new HardDrive(1500,0,256,"Corsair");
-        // display = new Display(4000,60,"Asus","3840 x 2160");
+        this.name = name;
     }
 
     // Prints the names and costs of peripherals
@@ -46,5 +44,9 @@ public class Computer {
     // Returns the cumulative cost of each computer.
     public int getPrice() {
         return (processor.getCost() + harddrive.getCost() + display.getCost());
-        }
     }
+
+    public String getName(){
+        return name;
+    }
+}
